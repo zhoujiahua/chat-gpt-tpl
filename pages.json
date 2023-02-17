@@ -1,0 +1,197 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/main/index/index",
+			"style": {
+				"navigationBarTitleText": "ChatGPT专业版",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/main/ask/index",
+			"style": {
+				"navigationBarTitleText": "ChatGPT问答收录",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#3975FB",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/main/form/index",
+			"style": {
+				"navigationBarTitleText": "ChatGPT专业版",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#3975FB",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/main/answer/index",
+			"style": {
+				"navigationBarTitleText": "ChatGPT专业版",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#3975FB",
+				"navigationBarTextStyle": "white",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/main/mode/index",
+			"style": {
+				"navigationBarTitleText": "AI模型库",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/main/chat/index",
+			"style": {
+				"navigationBarTitleText": "ChatGPT对话",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "pages/study",
+			"pages": [{
+				"path": "index/index",
+				"style": {
+					"navigationBarTitleText": "学院中心",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "article/detail",
+				"style": {
+					"navigationBarTitleText": "详情",
+					"enablePullDownRefresh": false
+				}
+			}]
+		}, {
+			"root": "pages/dealer",
+			"pages": [{
+				"path": "index/index",
+				"style": {
+					"navigationBarTitleText": "团队中心",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "team/index",
+				"style": {
+					"navigationBarTitleText": "我的团队",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "cash/index",
+				"style": {
+					"navigationBarTitleText": "提现明细",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "order/index",
+				"style": {
+					"navigationBarTitleText": "订单明细",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "withdrawal/index",
+				"style": {
+					"navigationBarTitleText": "提现申请",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "poster/index",
+				"style": {
+					"navigationBarTitleText": "我的海报",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pages/user",
+			"pages": [{
+				"path": "index/index",
+				"style": {
+					"navigationBarTitleText": "我的",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "custom"
+				}
+			}, {
+				"path": "recharge/index",
+				"style": {
+					"navigationBarTitleText": "在线充值",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "passport/login",
+				"style": {
+					"navigationBarTitleText": "授权登录",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "login/login",
+				"style": {
+					"navigationBarTitleText": "登录",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "login/reg",
+				"style": {
+					"navigationBarTitleText": "在线注册",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "help/index",
+				"style": {
+					"navigationBarTitleText": "帮助中心",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "recharge/log",
+				"style": {
+					"navigationBarTitleText": "充值明细",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "question/index",
+				"style": {
+					"navigationBarTitleText": "问答记录",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "custom"
+				}
+			}]
+		}
+	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#3975FB",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/main/index/index",
+			"iconPath": "static/tabbar/home.png",
+			"selectedIconPath": "static/tabbar/home_pre.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/main/mode/index",
+			"iconPath": "static/tabbar/question.png",
+			"selectedIconPath": "static/tabbar/question_pre.png",
+			"text": "模型"
+		}, {
+			"pagePath": "pages/user/index/index",
+			"iconPath": "static/tabbar/mine.png",
+			"selectedIconPath": "static/tabbar/mine_pre.png",
+			"text": "我的"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "ChatGPT专业版",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"uniIdRouter": {}
+}

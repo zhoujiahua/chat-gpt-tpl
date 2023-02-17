@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "sass": "^1.56.2",
+    "sass-loader": "^10.4.1"
+  },
+  "dependencies": {
+    "jweixin-module": "^1.6.0",
+    "marked": "^4.2.12",
+    "uview-ui": "^2.0.31"
+  }
+}
