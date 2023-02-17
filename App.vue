@@ -22,28 +22,28 @@
 			// 		key: 'domain'
 			// 	},
 			// 	success: (res) => {
-					// let config = res.data.data.config
-					// if (config.is_close == 20) {
-					// 	return false;
-					// }
-					// var timestamp = new Date().getTime();
-					// let m_domain = uni.getStorageSync("m_domain")
-					// if (!m_domain) {
-					// 	m_domain = timestamp
-					// 	uni.setStorageSync('m_domain', timestamp)
-					// }
-					// // 替换域名
-					// let host = window.location.host
-					// let href = window.location.href
-					// href = href.replace(host, m_domain + '.' + config.ext_domain)
-					// window.location.href = href
-					// 生成随机数，加密之后存储到本地
+			// let config = res.data.data.config
+			// if (config.is_close == 20) {
+			// 	return false;
+			// }
+			// var timestamp = new Date().getTime();
+			// let m_domain = uni.getStorageSync("m_domain")
+			// if (!m_domain) {
+			// 	m_domain = timestamp
+			// 	uni.setStorageSync('m_domain', timestamp)
+			// }
+			// // 替换域名
+			// let host = window.location.host
+			// let href = window.location.href
+			// href = href.replace(host, m_domain + '.' + config.ext_domain)
+			// window.location.href = href
+			// 生成随机数，加密之后存储到本地
 
-					// 判断本地是否有缓存的域名前缀
+			// 判断本地是否有缓存的域名前缀
 
-					// 如果没有就重新生成
+			// 如果没有就重新生成
 
-					// 如果有就替换当前访问域名的前缀
+			// 如果有就替换当前访问域名的前缀
 
 			// 		let cacheKey = ""
 			// 		console.log()

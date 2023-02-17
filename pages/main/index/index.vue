@@ -16,11 +16,27 @@
 			</u-transition>
 			<view class="btn-group">
 				<view class="btn" v-on:click="onToForm">
-					<u-button shape="circle" iconColor="#ffffff" color="#3975FB" icon="edit-pen" text="一键开启体验">
+					<u-button shape="circle" iconColor="#ffffff" color="#3975FB" icon="chat" text="一键开启体验">
 					</u-button>
 				</view>
 				<view class="btn" @click="onCopy">
-					<u-button shape="circle" color="#3975FB" :plain="true" icon="share" text="推荐给朋友"></u-button>
+					<u-button shape="circle" color="#3975FB" :plain="true" icon="share-square" text="推荐给朋友"></u-button>
+				</view>
+			</view>
+			<view class="info">
+				<view class="qrcode">
+					<view class="pic">
+						<u--image src="../../../static/images/wx.png" radius="5" width="230" height="230"
+							mode="widthFix" :lazy-load="true" duration="200" :fade="true">
+							<template v-slot:loading>
+								<u-loading-icon color="red"></u-loading-icon>
+							</template>
+						</u--image>
+					</view>
+				</view>
+				<view class="wechat" @click.native="wxCopy(wxNumber)">
+					<text>点我进群：</text>
+					<text>{{ wxNumber }}</text>
 				</view>
 			</view>
 		</view>
@@ -34,9 +50,13 @@
 	import {
 		detail
 	} from '@/api/user.js';
+	import {
+		wxNumber
+	} from '@/siteinfo.js'
 	export default {
 		data() {
 			return {
+				wxNumber,
 				userInfo: {},
 				setting: {},
 				dealerSetting: {}
@@ -57,6 +77,16 @@
 					.catch(err => {
 						console.log(err);
 					});
+			},
+			wxCopy(value) {
+				uni.setClipboardData({
+					data: value, //要被复制的内容
+					success: () => { //复制成功的回调函数
+						uni.showToast({ //提示
+							title: '微信号复制成功'
+						})
+					}
+				});
 			},
 			onCopy() {
 				if (this.dealerSetting.basic && this.dealerSetting.basic.values.is_open == 1) {
@@ -114,17 +144,23 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin-top: 40%;
+		margin-top: 10%;
+
+		.title,
+		.desc {
+			text-align: center;
+			margin-top: 15rpx;
+			padding: 0 10rpx;
+		}
 
 		.title {
 			font-size: 38rpx;
 			font-weight: bolder;
-			margin-top: 15rpx;
 		}
 
 		.desc {
-			margin-top: 15rpx;
 			font-size: 28rpx;
+			font-weight: bolder;
 			color: #666;
 		}
 
@@ -136,6 +172,36 @@
 
 				.u-button {
 					height: 100rpx;
+				}
+			}
+		}
+
+		.info {
+			.wechat {
+				font-size: 30rpx;
+				text-align: center;
+				padding-top: 20rpx;
+
+				text:first-child {
+					font-weight: bolder;
+				}
+
+				text:last-child {
+					color: #fa3534;
+					font-weight: bolder;
+				}
+
+				input {
+					display: none;
+				}
+			}
+
+			.qrcode {
+				.pic {
+					image {
+						width: 360rpx;
+						height: 360rpx;
+					}
 				}
 			}
 		}
